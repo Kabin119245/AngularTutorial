@@ -16,7 +16,7 @@ public class User implements Serializable {
     private String id;
     private String userName;
     private String lastName;
-    @DBRef
+    @DBRef  //reference to another document
     private Role role;
 
 }
