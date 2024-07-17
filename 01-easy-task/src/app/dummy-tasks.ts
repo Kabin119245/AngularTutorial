@@ -38,4 +38,20 @@ export const dummyTasks = [
       'Prepare and describe an issue template which will help with project management',
     dueDate: '2024-06-15',
   },
+  {
+    id: 't6',
+    userId: 'u2',
+    title: 'Prepare issue template',
+    summary:
+      'Prepare and describe an issue template which will help with project management',
+    dueDate: '2024-06-15',
+  },
+  {
+    id: 't7',
+    userId: 'u4',
+    title: 'Prepare issue template',
+    summary:
+      'Prepare and describe an issue template which will help with project management',
+    dueDate: '2024-06-15',
+  },
 ];

@@ -7,14 +7,15 @@
 }
 
 /* Hide scrollbars for Chrome, Safari and Opera */
-#tasks::-webkit-scrollbar, ul::-webkit-scrollbar {
+#tasks::-webkit-scrollbar,
+ul::-webkit-scrollbar {
   display: none;
 }
 
 /* Hide scrollbars for IE, Edge and Firefox */
 #tasks {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 
 header {
