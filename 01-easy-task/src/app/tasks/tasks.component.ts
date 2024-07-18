@@ -15,6 +15,8 @@ export class TasksComponent {
 
   tasks = dummyTasks;
 
+  onAddClickStart() {}
+
   get selectedUserTasks() {
     return this.tasks.filter((task) => task.userId === this.userId);
   }
