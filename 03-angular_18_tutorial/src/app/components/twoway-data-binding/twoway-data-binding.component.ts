@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
@@ -15,7 +15,10 @@ export class TwowayDataBindingComponent {
   num2: number = 0;
   result: number = 0;
 
+  name = signal('Kabin Giri');
+
   addNumbers() {
     this.result = this.num1 + this.num2;
+    this.name.set('Kanchan Dhamala');
   }
 }
