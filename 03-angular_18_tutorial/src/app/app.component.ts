@@ -3,6 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import { AddEmployeeComponent } from './components/add-employee/add-employee.component';
 import { EmployeeListComponent } from './components/employee-list/employee-list.component';
 import { DataBindingComponent } from './components/data-binding/data-binding.component';
+import { TwowayDataBindingComponent } from './components/twoway-data-binding/twoway-data-binding.component';
 
 @Component({
   selector: 'app-root',
@@ -12,6 +13,7 @@ import { DataBindingComponent } from './components/data-binding/data-binding.com
     AddEmployeeComponent,
     EmployeeListComponent,
     DataBindingComponent,
+    TwowayDataBindingComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',

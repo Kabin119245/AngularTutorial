@@ -1,0 +1,27 @@
+<p>twoway-data-binding works!</p>
+
+<h2>Two way data binding example</h2>
+
+<input type="text" name="" id="" [(ngModel)]="myName" />
+
+<h3>Below text is from component using interploation</h3>
+{{ myName }}
+<div>
+  <input
+    type="number"
+    name=""
+    id=""
+    [(ngModel)]="num1"
+    placeholder="Enter first number"
+  />
+  <input
+    type="number"
+    name=""
+    id=""
+    [(ngModel)]="num2"
+    placeholder="Enter second number"
+  />
+
+  <button (click)="addNumbers()">Add Them</button>
+  <div>Result: {{ result }}</div>
+</div>
