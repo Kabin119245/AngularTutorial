@@ -12,4 +12,10 @@
 <div class="{{ myClassName }}">Danger</div>
 <div [class]="myClassName">Danger</div>
 
-<input type="text" [value]="courseName" />
+<div><input type="text" [value]="courseName" /></div>
+
+<div>
+  <button class="btn btn-success" (click)="showAlert('Welcome to Angular 18')">
+    Show Alert Message
+  </button>
+</div>

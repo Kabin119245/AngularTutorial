@@ -21,4 +21,8 @@ export class DataBindingComponent {
   currentDate: Date = new Date();
 
   myClassName: string = 'bg-danger';
+
+  showAlert(message: string) {
+    alert(message);
+  }
 }
