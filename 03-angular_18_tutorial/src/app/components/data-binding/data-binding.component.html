@@ -1,0 +1,15 @@
+<p>data-binding works!</p>
+
+<h2>One way data binding using interploation</h2>
+<h3>I am reading {{ courseName }}</h3>
+
+<input type="text" value="{{ rollNo }}" />
+<br />
+<input type="{{ inputType }}" />
+
+<h2>Using Property binding</h2>
+
+<div class="{{ myClassName }}">Danger</div>
+<div [class]="myClassName">Danger</div>
+
+<input type="text" [value]="courseName" />
