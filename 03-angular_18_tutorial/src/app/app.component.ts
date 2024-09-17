@@ -4,6 +4,7 @@ import { AddEmployeeComponent } from './components/add-employee/add-employee.com
 import { EmployeeListComponent } from './components/employee-list/employee-list.component';
 import { DataBindingComponent } from './components/data-binding/data-binding.component';
 import { TwowayDataBindingComponent } from './components/twoway-data-binding/twoway-data-binding.component';
+import { StructuralDirectiveComponent } from './components/directive/structural-directive/structural-directive.component';
 
 @Component({
   selector: 'app-root',
@@ -14,6 +15,7 @@ import { TwowayDataBindingComponent } from './components/twoway-data-binding/two
     EmployeeListComponent,
     DataBindingComponent,
     TwowayDataBindingComponent,
+    StructuralDirectiveComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',

@@ -1,0 +1,25 @@
+<p>structural-directive works!</p>
+<div class="row pt-3">
+  <div *ngIf="isDiv1enabled" class="col-3 bg-danger p-3 text-center">
+    This is a content to show and hide DIv 1
+  </div>
+  <div>
+    <button class="m-3 btn btn-danger" (click)="hideDiv1()">Hide</button>
+    <button class="btn btn-success" (click)="showDiv1()">Show</button>
+  </div>
+</div>
+
+<div class="row pt-3">
+  <div class="col-3 bg-primary p-3 text-center" *ngIf="isDiv2enabled">Div2</div>
+  <div>
+    <button class="m-3 btn btn-success" (click)="toggleDiv2()">Toggle</button>
+  </div>
+</div>
+
+<div class="col-3 bg-primary p-3 text-center" *ngIf="num1 == num2">Div3</div>
+<input type="text" name="" id="" [(ngModel)]="num1" placeholder="Num1" />
+<input class="m-3" type="text" [(ngModel)]="num2" placeholder="Num2" />
+<div>
+  Num1: {{ num1 }} <br />
+  Num2:{{ num2 }}
+</div>
