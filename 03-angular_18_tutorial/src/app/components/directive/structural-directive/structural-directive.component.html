@@ -23,3 +23,60 @@
   Num1: {{ num1 }} <br />
   Num2:{{ num2 }}
 </div>
+
+<div class="row">
+  <!-- ngFor for list items -->
+  <div class="col-3">
+    <ul>
+      <li *ngFor="let city of cityArray">
+        {{ city }}
+      </li>
+    </ul>
+  </div>
+  <!-- ngFOr for div aslo -->
+  <div class="col-3">
+    <div *ngFor="let city of cityArray">{{ city }}</div>
+  </div>
+
+  <div class="col-3">
+    <!-- also div items for menu items -->
+    <select>
+      <option *ngFor="let city of cityArray">{{ city }}</option>
+    </select>
+  </div>
+
+  <div class="col-3">
+    <!-- also div items for menu items -->
+    <select>
+      <option *ngFor="let stud of studentList" [value]="stud.studId">
+        {{ stud.name }}
+      </option>
+    </select>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-5">
+    <table>
+      <thead class="table table-bordered">
+        <tr>
+          <th>SR No</th>
+          <th>Name</th>
+          <th>City</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let stud of studentList; let srNo = index">
+          <td>{{ srNo + 1 }}</td>
+          <td>{{ stud.name }}</td>
+          <td>{{ stud.city }}</td>
+          <td>
+            <span *ngIf="stud.isActive">Active</span>
+            <span *ngIf="!stud.isActive">InActive</span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
