@@ -5,7 +5,7 @@ import { EmployeeListComponent } from './components/employee-list/employee-list.
 import { DataBindingComponent } from './components/data-binding/data-binding.component';
 import { TwowayDataBindingComponent } from './components/twoway-data-binding/twoway-data-binding.component';
 import { StructuralDirectiveComponent } from './components/directive/structural-directive/structural-directive.component';
-
+import { AttributeDirectiveComponent } from './components/directive/attribute-directive/attribute-directive.component';
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -16,6 +16,7 @@ import { StructuralDirectiveComponent } from './components/directive/structural-
     DataBindingComponent,
     TwowayDataBindingComponent,
     StructuralDirectiveComponent,
+    AttributeDirectiveComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',

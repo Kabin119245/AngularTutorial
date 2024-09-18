@@ -1,0 +1,33 @@
+<p>attribute-directive works!</p>
+
+<div class="row m-2">
+  <div class="col-3">
+    <div class="p-3 text-center" [ngClass]="div1BgColor">
+      <!-- this bg-danger i want to bring dynamically -->
+      <h4>Div1</h4>
+    </div>
+  </div>
+  <div class="col-3">
+    <div
+      class="p-3 text-center"
+      [ngClass]="isDiv2Active == true ? 'bg-danger' : 'bg-warning'"
+    >
+      <h4>Div2</h4>
+    </div>
+  </div>
+  <div class="col-3">
+    <div class="bg-danger p-3 text-center">
+      <h4>Div3</h4>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-3 text-center">
+    <button class="btn btn-danger mx-2" (click)="addRed()">Add Red</button>
+    <button class="btn btn-primary" (click)="addBlue()">Add Blue</button>
+  </div>
+  <div class="col-3 text-center">
+    <button class="btn btn-success mx-2" (click)="toggleDiv2Class()">Toggle</button>
+  </div>
+</div>
