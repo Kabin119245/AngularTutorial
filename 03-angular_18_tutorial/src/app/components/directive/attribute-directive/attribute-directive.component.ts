@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-attribute-directive',
@@ -12,6 +13,8 @@ import { FormsModule } from '@angular/forms';
 export class AttributeDirectiveComponent {
   num1: string = '';
   num2: string = '';
+
+  constructor(private router: Router) {}
 
   studentList: any[] = [
     {
@@ -70,5 +73,9 @@ export class AttributeDirectiveComponent {
 
   toggleDiv2Class() {
     this.isDiv2Active = !this.isDiv2Active;
+  }
+
+  navigateToStructural() {
+    this.router.navigateByUrl('structural-dir');
   }
 }

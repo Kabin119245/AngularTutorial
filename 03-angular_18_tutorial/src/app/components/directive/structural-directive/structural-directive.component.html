@@ -1,4 +1,7 @@
 <p>structural-directive works!</p>
+<button class="btn btn-primary" [routerLink]="['/attribute-dir']">
+  Go to Attribute Directive
+</button>
 <div class="row pt-3">
   <div *ngIf="isDiv1enabled" class="col-3 bg-danger p-3 text-center">
     This is a content to show and hide DIv 1
@@ -57,8 +60,8 @@
 
 <div class="row">
   <div class="col-5">
-    <table>
-      <thead class="table table-bordered">
+    <table class="table table-bordered">
+      <thead>
         <tr>
           <th>SR No</th>
           <th>Name</th>

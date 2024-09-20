@@ -1,6 +1,6 @@
-<h1>Hello World</h1>
+<!-- <h1>Hello World</h1>
 
-<h2>Working with components</h2>
+<h2>Working with components</h2> -->
 <!-- <table style="border: 2px solid red">
   <tr>
     <td><app-add-employee /></td>
@@ -12,4 +12,54 @@
 <app-data-binding> </app-data-binding>
 <app-twoway-data-binding />
 <app-structural-directive /> -->
-<app-attribute-directive />
+<!-- <app-attribute-directive /> -->
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="employee-list">Employee List</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="add-employee">Add Employee</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="structural-dir"
+            >Structural Directive</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="attribute-dir">Attribute Directive</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="data-binding">Data Binding</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="twoway-binding"
+            >Two Way Data Binding</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
