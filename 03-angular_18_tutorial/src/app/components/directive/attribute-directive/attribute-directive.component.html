@@ -16,8 +16,17 @@
     </div>
   </div>
   <div class="col-3">
-    <div class="bg-danger p-3 text-center">
+    <div
+      class="bg-success p-3 text-center"
+      [ngClass]="num1 == num2 ? 'bg-secondary' : 'bg-danger'"
+    >
       <h4>Div3</h4>
+    </div>
+  </div>
+
+  <div class="col-3">
+    <div class="bg-primary p-3 text-center">
+      <h4>Div4</h4>
     </div>
   </div>
 </div>
@@ -28,6 +37,60 @@
     <button class="btn btn-primary" (click)="addBlue()">Add Blue</button>
   </div>
   <div class="col-3 text-center">
-    <button class="btn btn-success mx-2" (click)="toggleDiv2Class()">Toggle</button>
+    <button class="btn btn-success mx-2" (click)="toggleDiv2Class()">
+      Toggle
+    </button>
+  </div>
+  <div class="col-3 text-center">
+    <input class="mx-2" type="text" name="" id="" [(ngModel)]="num1" />
+    <input type="text" name="" id="" [(ngModel)]="num2" />
+  </div>
+</div>
+<div class="my-2 row">
+  <div class="col-5">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>SR No</th>
+          <th>Name</th>
+          <th>Total Marks</th>
+          <th>City</th>
+          <th>Status</th>
+          <th>Gender</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let stud of studentList; let srNo = index">
+          <td>{{ srNo + 1 }}</td>
+          <td>{{ stud.name }}</td>
+          <td>
+            <div class="progress">
+              <div
+                class="progress-bar"
+                [ngStyle]="{ width: stud.totalMarks + '%' }"
+              >
+                {{ stud.totalMarks }}
+              </div>
+            </div>
+          </td>
+          <td>{{ stud.city }}</td>
+          <td
+            [ngStyle]="{
+              'background-color': stud.isActive ? 'green' : 'yellow'
+            }"
+          >
+            <span *ngIf="stud.isActive">Active</span>
+            <span *ngIf="!stud.isActive">InActive</span>
+          </td>
+          <td
+            [ngStyle]="{
+              'background-color': stud.gender == 'Male' ? 'blue' : 'pink'
+            }"
+          >
+            {{ stud.gender }}
+          </td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </div>
