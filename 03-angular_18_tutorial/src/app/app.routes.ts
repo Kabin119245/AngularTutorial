@@ -5,6 +5,7 @@ import { EmployeeListComponent } from './components/employee-list/employee-list.
 import { StructuralDirectiveComponent } from './components/directive/structural-directive/structural-directive.component';
 import { AttributeDirectiveComponent } from './components/directive/attribute-directive/attribute-directive.component';
 import { TwowayDataBindingComponent } from './components/twoway-data-binding/twoway-data-binding.component';
+import { ControlFlowComponent } from './components/control-flow/control-flow.component';
 
 export const routes: Routes = [
   {
@@ -30,5 +31,9 @@ export const routes: Routes = [
   {
     path: 'twoway-binding',
     component: TwowayDataBindingComponent,
+  },
+  {
+    path: 'control-flow',
+    component: ControlFlowComponent,
   },
 ];
