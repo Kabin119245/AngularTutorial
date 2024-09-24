@@ -6,6 +6,7 @@ import { StructuralDirectiveComponent } from './components/directive/structural-
 import { AttributeDirectiveComponent } from './components/directive/attribute-directive/attribute-directive.component';
 import { TwowayDataBindingComponent } from './components/twoway-data-binding/twoway-data-binding.component';
 import { ControlFlowComponent } from './components/control-flow/control-flow.component';
+import { ForAndSwitchComponent } from './components/for-and-switch/for-and-switch.component';
 
 export const routes: Routes = [
   {
@@ -35,5 +36,10 @@ export const routes: Routes = [
   {
     path: 'control-flow',
     component: ControlFlowComponent,
+  },
+
+  {
+    path: 'for-switch',
+    component: ForAndSwitchComponent,
   },
 ];

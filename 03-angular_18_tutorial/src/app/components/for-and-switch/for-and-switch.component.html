@@ -1,0 +1,77 @@
+<p>for-and-switch works!</p>
+
+<div class="row">
+  <div class="col-3">
+    <ul>
+      @for (item of cityArray; track $index) {
+      <li>{{ item }}</li>
+      }
+    </ul>
+  </div>
+
+  <div class="col-3">
+    <p>Select items</p>
+    <select name="" id="">
+      @for (item of studentList; track $index) {
+      <option [value]="item.studId">
+        Name: {{ item.name }} & Address: {{ item.city }}
+      </option>
+      }
+    </select>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-5">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Sr NO</th>
+          <th>Name</th>
+          <th>City</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (item of studentList; track $index) {
+        <tr>
+          <td>{{ $index + 1 }}</td>
+          <td>{{ item.name }}</td>
+          <td>{{ item.city }}</td>
+          @if ( item.isActive) {
+          <td>Active</td>
+          } @else {
+          <td>Inactive</td>
+          }
+        </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+  <div class="col-3">
+    Enter Values form 1 to 7
+    <input type="text" [(ngModel)]="dayNumber" />
+  </div>
+  <div class="col-3">
+    <h5>Day Name is:</h5>
+    @switch (dayNumber) { @case ('1') {
+    <span>Sunday</span>
+    } @case ('') {
+    <span></span>
+    } @case ('2') {
+    <span>Monday</span>
+    } @case ('3') {
+    <span>Tuesday</span>
+    } @case ('4') {
+    <span>Wendnesday</span>
+    } @case ('5') {
+    <span>Thrusday</span>
+    } @case ('6') {
+    <span>Friday</span>
+    } @case ('7') {
+    <span>Saturday</span>
+    } @default {
+    <span>Wrong Entry</span>
+    } }
+  </div>
+</div>
