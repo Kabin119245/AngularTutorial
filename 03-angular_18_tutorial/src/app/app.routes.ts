@@ -7,6 +7,7 @@ import { AttributeDirectiveComponent } from './components/directive/attribute-di
 import { TwowayDataBindingComponent } from './components/twoway-data-binding/twoway-data-binding.component';
 import { ControlFlowComponent } from './components/control-flow/control-flow.component';
 import { ForAndSwitchComponent } from './components/for-and-switch/for-and-switch.component';
+import { PipesComponent } from './components/pipes/pipes.component';
 
 export const routes: Routes = [
   {
@@ -41,5 +42,10 @@ export const routes: Routes = [
   {
     path: 'for-switch',
     component: ForAndSwitchComponent,
+  },
+
+  {
+    path: 'pipes',
+    component: PipesComponent,
   },
 ];

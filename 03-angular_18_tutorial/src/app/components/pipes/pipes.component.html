@@ -1,0 +1,42 @@
+<p>pipes works!</p>
+
+<div class="row">
+  <div class="col-3 card p-3">
+    <span>Original Value: {{ firstName }}</span>
+    <span>after Pipe: {{ firstName | uppercase }}</span>
+  </div>
+  <div class="col-3 card p-3 mx-3">
+    <span>Original Value: {{ myName }}</span>
+    <span>after Pipe: {{ myName | titlecase }}</span>
+  </div>
+
+  <div class="col-3 card p-3 mx-3">
+    <span>Original Value: {{ lastName }}</span>
+    <span>after Pipe: {{ lastName | lowercase }}</span>
+  </div>
+
+  <div class="row my-4">
+    <div class="col-3 card p-3">
+      <span>Original Value: {{ currentDate }}</span>
+      <span>after Pipe: {{ currentDate | date : "dd-MM-yyyy" }}</span>
+    </div>
+    <div class="col-3 card p-3 mx-3">
+      <span>Original Value: {{ currentDate }}</span>
+      <span>after Pipe: {{ currentDate | date : "dd-MMM-yy" }}</span>
+    </div>
+    <div class="col-3 card p-3 mx-3">
+      <span>Original Value: {{ student }}</span>
+      <span>after Pipe: {{ student | json }}</span>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-3 card p-3">
+      <span>Original Value: {{ currentTime }}</span>
+      <span>after Pipe: {{ currentTime | async }}</span>
+    </div>
+    <div class="col-3 card p-3 mx-3">
+      <span>Original Value: {{ firstName }}</span>
+      <span>after Pipe: {{ firstName | uppercase }}</span>
+    </div>
+  </div>
+</div>
