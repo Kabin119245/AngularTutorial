@@ -1,11 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { interval, Observable, map } from 'rxjs';
+import { NaPipe } from '../../pipes/na.pipe';
 
 @Component({
   selector: 'app-pipes',
   standalone: true,
-  imports: [CommonModule],
+  imports: [NaPipe, CommonModule],
   templateUrl: './pipes.component.html',
   styleUrl: './pipes.component.css',
 })
@@ -29,4 +30,11 @@ export class PipesComponent {
   constructor() {
     this.currentTime = interval(1000).pipe(map(() => new Date()));
   }
+
+  person: any = {
+    name: 'Kabin',
+    city: 'Kathmandu',
+    sId: 13,
+    maritalStatus: '',
+  };
 }
