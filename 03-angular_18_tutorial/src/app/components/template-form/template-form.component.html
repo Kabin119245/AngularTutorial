@@ -1,5 +1,7 @@
-<form class="row g-3">
-  <div class="col-md-6">
+<h2>Templete Form</h2>
+<p>Using ngModel</p>
+<form class="row g-3" #form="ngForm">
+  <div class="col-md-3">
     <label for="inputEmail4" class="form-label">Email</label>
     <input
       type="email"
@@ -8,6 +10,25 @@
       [(ngModel)]="user.email"
       name="email"
     />
+  </div>
+  <div class="col-md-3">
+    <label for="inputEmail4" class="form-label">Username</label>
+    <input
+      type="username"
+      class="form-control"
+      #uName="ngModel"
+      [(ngModel)]="user.username"
+      name="username"
+      required
+      minlength="5"
+    />
+    <div class="text-danger">
+      @if (( uName.touched || uName.dirty) && uName.errors?.['required']) {
+      <span>This field is required</span>
+      } @else if (uName.errors?.['minlength']) {
+      <span>Minimum length is 5</span>
+      }
+    </div>
   </div>
   <div class="col-md-6">
     <label for="inputPassword4" class="form-label">Password</label>
@@ -49,6 +70,7 @@
       name="state"
       [(ngModel)]="user.state"
     >
+      <option selected disabled value="">Choose...</option>
       <option>Bagmati</option>
       <option>Koshi</option>
       <option>Pradesh 1</option>
@@ -63,6 +85,7 @@
       id="inputZip"
       [(ngModel)]="user.zipCode"
       name="zipCode"
+      required
     />
   </div>
   <div class="col-12">
@@ -79,9 +102,19 @@
       </label>
     </div>
   </div>
-  <div class="col-12">
-    <button type="submit" class="btn btn-primary" (click)="onSubmit()">
+  <div class="col-2">
+    <button
+      type="submit"
+      [disabled]="form.invalid"
+      class="btn btn-primary"
+      (click)="onSubmit()"
+    >
       Submit
+    </button>
+  </div>
+  <div class="col-2">
+    <button type="reset" class="btn btn-secondary" (click)="resetForm()">
+      Reset Form
     </button>
   </div>
 

@@ -23,7 +23,18 @@ export class TemplateFormComponent {
   userSubmitted: any = '';
 
   onSubmit() {
-    debugger;
     this.userSubmitted = this.user;
+  }
+
+  resetForm() {
+    this.user = {
+      email: '',
+      password: '',
+      address: '',
+      city: '',
+      state: '',
+      zipCode: '',
+      isAcceptTerms: false,
+    };
   }
 }
