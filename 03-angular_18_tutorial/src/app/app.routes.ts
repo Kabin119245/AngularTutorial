@@ -8,6 +8,7 @@ import { TwowayDataBindingComponent } from './components/twoway-data-binding/two
 import { ControlFlowComponent } from './components/control-flow/control-flow.component';
 import { ForAndSwitchComponent } from './components/for-and-switch/for-and-switch.component';
 import { PipesComponent } from './components/pipes/pipes.component';
+import { TemplateFormComponent } from './components/template-form/template-form.component';
 
 export const routes: Routes = [
   {
@@ -47,5 +48,9 @@ export const routes: Routes = [
   {
     path: 'pipes',
     component: PipesComponent,
+  },
+  {
+    path: 'template-form',
+    component: TemplateFormComponent,
   },
 ];
