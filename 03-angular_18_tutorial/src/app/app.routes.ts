@@ -9,6 +9,7 @@ import { ControlFlowComponent } from './components/control-flow/control-flow.com
 import { ForAndSwitchComponent } from './components/for-and-switch/for-and-switch.component';
 import { PipesComponent } from './components/pipes/pipes.component';
 import { TemplateFormComponent } from './components/template-form/template-form.component';
+import { ReactiveFormComponent } from './components/reactive-form/reactive-form.component';
 
 export const routes: Routes = [
   {
@@ -52,5 +53,9 @@ export const routes: Routes = [
   {
     path: 'template-form',
     component: TemplateFormComponent,
+  },
+  {
+    path: 'reactive-form',
+    component: ReactiveFormComponent,
   },
 ];
