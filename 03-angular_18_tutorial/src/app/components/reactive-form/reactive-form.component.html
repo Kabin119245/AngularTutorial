@@ -8,6 +8,14 @@
       class="form-control"
       id="inputEmail4"
     />
+    <div class="text-danger">
+      @if (studentForm.controls['email'].touched &&
+      studentForm.controls['email'].errors?.['required'] ) {
+      <span>This is required</span>
+      } @else if ( studentForm.controls['email'].errors?.['email']) {
+      <span>Not a valid email</span>
+      }
+    </div>
   </div>
   <div class="col-md-6">
     <label for="inputPassword4" class="form-label">Password</label>
@@ -17,6 +25,14 @@
       class="form-control"
       id="inputPassword4"
     />
+    <div class="text-danger">
+      @if (studentForm.controls['password'].touched &&
+      studentForm.controls['password'].errors?.['required']) {
+      <span>This is required</span>
+      } @else if (studentForm.controls['password'].errors?.['minlength']) {
+      <span>Minimum 8 characters required</span>
+      }
+    </div>
   </div>
   <div class="col-12">
     <label for="inputAddress" class="form-label">Address</label>
@@ -72,7 +88,12 @@
     </div>
   </div>
   <div class="col-12">
-    <button type="submit" class="btn btn-primary" (click)="onSave()">
+    <button
+      type="submit"
+      class="btn btn-primary"
+      (click)="onSave()"
+      [disabled]="studentForm.invalid"
+    >
       Sign in
     </button>
   </div>

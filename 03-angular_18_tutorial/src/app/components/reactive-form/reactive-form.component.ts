@@ -1,6 +1,11 @@
 import { JsonPipe } from '@angular/common';
 import { Component } from '@angular/core';
-import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import {
+  FormControl,
+  FormGroup,
+  ReactiveFormsModule,
+  Validators,
+} from '@angular/forms';
 
 @Component({
   selector: 'app-reactive-form',
@@ -11,13 +16,16 @@ import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 })
 export class ReactiveFormComponent {
   studentForm: FormGroup = new FormGroup({
-    email: new FormControl(),
-    password: new FormControl(),
+    email: new FormControl('', [Validators.email, Validators.required]),
+    password: new FormControl('', [
+      Validators.required,
+      Validators.minLength(8),
+    ]),
     address: new FormControl(),
     city: new FormControl(),
     state: new FormControl(),
     zipCode: new FormControl(),
-    isAcceptTerms: new FormControl(),
+    isAcceptTerms: new FormControl('', [Validators.required]),
   });
 
   formValue: any;
