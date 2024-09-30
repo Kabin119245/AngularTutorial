@@ -1,0 +1,23 @@
+<p>post-api works!</p>
+<div class="row">
+  <label for="">Department Name</label>
+  <input
+    type="text"
+    [(ngModel)]="departmentObj.departmentName"
+    name=""
+    id=""
+    class="form-control"
+  />
+  <label for="">Department Logo</label>
+  <input
+    type="text"
+    [(ngModel)]="departmentObj.departmentLogo"
+    name=""
+    id=""
+    class="form-control"
+  />
+
+  <div class="col-5">
+    <div class="m-5 btn btn-success" (click)="onSave()">Save</div>
+  </div>
+</div>
