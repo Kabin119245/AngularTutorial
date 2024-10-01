@@ -1,0 +1,59 @@
+<div class="row">
+  <!-- Table Section -->
+  <div class="col-md-7">
+    <div class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Sr No</th>
+          <th>Name</th>
+          <th>Logo</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Keeping the @for syntax as requested -->
+        @for ( item of deptList; track $index) {
+        <tr>
+          <td>{{ $index + 1 }}</td>
+          <td>{{ item.departmentName }}</td>
+          <td>{{ item.departmentLogo }}</td>
+          <td>
+            <button class="btn btn-primary" (click)="onEdit(item)">Edit</button>
+            <button
+              class="mx-2 btn btn-danger"
+              (click)="onDelete(item.departmentId)"
+            >
+              Delete
+            </button>
+          </td>
+        </tr>
+        }
+      </tbody>
+    </div>
+  </div>
+
+  <!-- Form Section -->
+  <div class="col-md-5">
+    <label for="deptName">Department Name</label>
+    <input
+      type="text"
+      [(ngModel)]="deptObj.departmentName"
+      id="deptName"
+      class="form-control"
+    />
+    <label for="deptLogo" class="mt-3">Department Logo</label>
+    <input
+      type="text"
+      [(ngModel)]="deptObj.departmentLogo"
+      id="deptLogo"
+      class="form-control"
+    />
+    <div class="mt-4">
+      @if (deptObj. departmentId == 0) {
+      <button class="btn btn-success" (click)="onSave()">Save</button>
+      } @else if (deptObj. departmentId != 0) {
+      <button class="btn btn-warning" (click)="onUpdate()">Update</button>
+      }
+    </div>
+  </div>
+</div>
