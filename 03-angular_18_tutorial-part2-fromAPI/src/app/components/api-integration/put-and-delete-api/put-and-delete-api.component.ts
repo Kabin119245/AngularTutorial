@@ -2,6 +2,7 @@ import { JsonPipe } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component, inject, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { DepartmentService } from '../../../service/department.service';
 
 @Component({
   selector: 'app-put-and-delete-api',
@@ -17,6 +18,10 @@ export class PutAndDeleteApiComponent implements OnInit {
     departmentLogo: '',
   };
 
+  //now need to inject object of department service
+
+  private deptSrv = inject(DepartmentService);
+
   deptList: any[] = [];
 
   ngOnInit(): void {
@@ -26,19 +31,19 @@ export class PutAndDeleteApiComponent implements OnInit {
   http = inject(HttpClient);
 
   onSave() {
-    this.http
-      .post(
-        'https://projectapi.gerasim.in/api/Complaint/AddNewDepartment',
-        this.deptObj
-      )
-      .subscribe((res: any) => {
-        if (res.result) {
-          alert('Department created successfully');
-          this.getDepartment();
-        } else {
-          alert(res.message);
-        }
-      });
+    // this.http
+    //   .post(
+    //     'https://projectapi.gerasim.in/api/Complaint/AddNewDepartment',
+    //     this.deptObj
+    //   )
+    this.deptSrv.saveNewDept(this.deptObj).subscribe((res: any) => {
+      if (res.result) {
+        alert('Department created successfully');
+        this.getDepartment();
+      } else {
+        alert(res.message);
+      }
+    });
   }
 
   onUpdate() {
@@ -81,11 +86,17 @@ export class PutAndDeleteApiComponent implements OnInit {
     }
   }
 
+  // getDepartment() {
+  //   this.http
+  //     .get('https://projectapi.gerasim.in/api/Complaint/GetParentDepartment')
+  //     .subscribe((res: any) => {
+  //       this.deptList = res.data;
+  //     });
+  // }
+
   getDepartment() {
-    this.http
-      .get('https://projectapi.gerasim.in/api/Complaint/GetParentDepartment')
-      .subscribe((res: any) => {
-        this.deptList = res.data;
-      });
+    this.deptSrv.getAllDept().subscribe((res: any) => {
+      this.deptList = res.data;
+    });
   }
 }
