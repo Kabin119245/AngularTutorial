@@ -3,11 +3,12 @@ import { HttpClient } from '@angular/common/http';
 import { Component, inject, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { DepartmentService } from '../../../service/department.service';
+import { AlertComponent } from '../../../reusableComponent/alert/alert.component';
 
 @Component({
   selector: 'app-put-and-delete-api',
   standalone: true,
-  imports: [FormsModule, JsonPipe],
+  imports: [FormsModule, JsonPipe, AlertComponent],
   templateUrl: './put-and-delete-api.component.html',
   styleUrl: './put-and-delete-api.component.css',
 })

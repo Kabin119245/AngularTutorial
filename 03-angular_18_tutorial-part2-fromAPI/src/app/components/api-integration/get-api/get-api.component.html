@@ -1,5 +1,7 @@
 <p>get-api works!</p>
 
+<app-alert [message]="'Welcome to GET API'" [alertType]="'Warning'" />
+
 <button class="btn btn-success" (click)="getAllUsers()">Get All Users</button>
 @if (loading) {
 <div>Loading...</div>

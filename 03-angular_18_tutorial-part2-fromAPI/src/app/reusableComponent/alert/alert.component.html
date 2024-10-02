@@ -1,0 +1,11 @@
+<div
+  class="alert alert-primary"
+  role="alert"
+  [ngClass]="{
+    'alert-success': alertType == 'Success',
+    'alert-warning': alertType == 'Warning',
+    'alert-danger': alertType == 'Danger'
+  }"
+>
+  <strong>{{ alertType }}</strong> {{ message }}
+</div>

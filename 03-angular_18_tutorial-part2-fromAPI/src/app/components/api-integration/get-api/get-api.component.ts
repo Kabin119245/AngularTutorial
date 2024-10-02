@@ -2,11 +2,12 @@ import { JsonPipe } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { AlertComponent } from '../../../reusableComponent/alert/alert.component';
 
 @Component({
   selector: 'app-get-api',
   standalone: true,
-  imports: [RouterLink, JsonPipe],
+  imports: [RouterLink, JsonPipe, AlertComponent],
   templateUrl: './get-api.component.html',
   styleUrl: './get-api.component.css',
 })
