@@ -4,7 +4,7 @@ import { Component, inject, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { DepartmentService } from '../../../service/department.service';
 import { AlertComponent } from '../../../reusableComponent/alert/alert.component';
-import { MyButtonComponent } from "../../../reusableComponent/my-button/my-button.component";
+import { MyButtonComponent } from '../../../reusableComponent/my-button/my-button.component';
 
 @Component({
   selector: 'app-put-and-delete-api',
@@ -28,6 +28,10 @@ export class PutAndDeleteApiComponent implements OnInit {
 
   ngOnInit(): void {
     this.getDepartment();
+  }
+
+  getData(data: String) {
+    alert(data);
   }
 
   http = inject(HttpClient);

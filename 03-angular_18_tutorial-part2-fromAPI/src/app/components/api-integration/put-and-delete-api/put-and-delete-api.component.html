@@ -5,6 +5,7 @@
 <app-my-button
   [btnClass]="'btn btn-primary'"
   [btnText]="'Get Data'"
+  (onBtnClick)="getData($event)"
 ></app-my-button>
 <div class="row">
   <!-- Table Section -->

@@ -14,6 +14,6 @@ export class MyButtonComponent {
   @Output() onBtnClick = new EventEmitter<any>();
 
   onClick() {
-    this.onBtnClick.emit();
+    this.onBtnClick.emit('Hi from Child Component');
   }
 }
