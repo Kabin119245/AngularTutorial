@@ -2,6 +2,10 @@
   [message]="'Welcome to POST, PUT & DELETE API'"
   [alertType]="'Success'"
 />
+<app-my-button
+  [btnClass]="'btn btn-primary'"
+  [btnText]="'Get Data'"
+></app-my-button>
 <div class="row">
   <!-- Table Section -->
   <div class="col-md-7">
@@ -23,12 +27,18 @@
           <td>{{ item.departmentLogo }}</td>
           <td>
             <button class="btn btn-primary" (click)="onEdit(item)">Edit</button>
-            <button
+            <!-- <button
               class="mx-2 btn btn-danger"
               (click)="onDelete(item.departmentId)"
             >
               Delete
-            </button>
+            </button> -->
+
+            <app-my-button
+              [btnClass]="'btn btn-danger mx-2'"
+              [btnText]="'Delete Data'"
+              (onBtnClick)="onDelete(item.departmentId)"
+            ></app-my-button>
           </td>
         </tr>
         }

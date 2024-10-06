@@ -2,11 +2,12 @@ import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { AlertComponent } from '../../../reusableComponent/alert/alert.component';
+import { MyButtonComponent } from '../../../reusableComponent/my-button/my-button.component';
 
 @Component({
   selector: 'app-post-api',
   standalone: true,
-  imports: [FormsModule, AlertComponent],
+  imports: [FormsModule, AlertComponent, MyButtonComponent],
   templateUrl: './post-api.component.html',
   styleUrl: './post-api.component.css',
 })
