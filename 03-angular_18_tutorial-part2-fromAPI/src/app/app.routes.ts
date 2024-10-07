@@ -3,6 +3,7 @@ import { GetApiComponent } from './components/api-integration/get-api/get-api.co
 import { PostApiComponent } from './components/api-integration/post-api/post-api.component';
 import { PutAndDeleteApiComponent } from './components/api-integration/put-and-delete-api/put-and-delete-api.component';
 import { LifecycleEventComponent } from './components/lifecycle-event/lifecycle-event.component';
+import { NgTemplateComponent } from './components/ng-template/ng-template.component';
 
 export const routes: Routes = [
   {
@@ -22,5 +23,9 @@ export const routes: Routes = [
   {
     path: 'lifecycle-event',
     component: LifecycleEventComponent,
+  },
+  {
+    path: 'ng-template',
+    component: NgTemplateComponent,
   },
 ];
